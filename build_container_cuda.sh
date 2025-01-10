@@ -47,4 +47,9 @@ docker run -td --privileged --net=host --ipc=host \
 docker exec -it orbslam3 bash -i -c  "git clone -b add_euroc_example.sh https://github.com/jahaniam/ORB_SLAM3.git /ORB_SLAM3 && cd /ORB_SLAM3 && chmod +x build.sh && ./build.sh "
 # Compile ORBSLAM3-ROS
 docker exec -it orbslam3 bash -i -c "echo 'ROS_PACKAGE_PATH=/opt/ros/noetic/share:/ORB_SLAM3/Examples/ROS'>>~/.bashrc && source ~/.bashrc && cd /ORB_SLAM3 && chmod +x build_ros.sh && ./build_ros.sh"
-
+# Additional commands
+docker exec -it orbslam3 bash -i -c "apt update && apt install -y libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswscale-dev libswresample-dev"
+docker exec -it orbslam3 bash -i -c "mkdir -p catkin_ws/src && cd catkin_ws/src && git clone https://github.com/AutonomousFieldRoboticsLab/gopro_ros.git && cd .. && catkin_make"
+docker exec -it orbslam3 bash -i -c "cd catkin_ws/src && git clone https://github.com/ori-drs/allan_variance_ros.git && cd .. && catkin_make"
+docker exec -it orbslam3 bash -i -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget autoconf automake nano python3-dev python3-pip python3-scipy python3-matplotlib ipython3 python3-wxgtk4.0 python3-tk python3-igraph python3-pyx libeigen3-dev libboost-all-dev libsuitesparse-dev doxygen libopencv-dev libpoco-dev libtbb-dev libblas-dev liblapack-dev libv4l-dev python3-catkin-tools python3-osrf-pycommon"
+docker exec -it orbslam3 bash -i -c "cd catkin_ws/src && git clone https://github.com/ethz-asl/kalibr.git && cd .. && catkin_make"
