@@ -45,6 +45,8 @@ if nan in allan_variance.csv
 
 ```bash
 sed -i '1201,$d' allan_variance.csv
+rosrun allan_variance_ros analysis.py --data /ORB_SLAM3/catkin_ws/Data/allan_variance.csv
+
 ```
 ---
 
