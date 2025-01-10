@@ -31,9 +31,15 @@ roslaunch gopro_ros gopro_to_asl.launch gopro_video:=/ORB_SLAM3/catkin_ws/Data/G
 
 ### 4. Extract IMU Parameters
 Use the following command to find the IMU parameters:
-
+fisrt you need to create a config file like 
 ```bash
-rosrun allan_variance_ros allan_variance /ORB_SLAM3/catkin_ws/Data/ /ORB_SLAM3/catkin_ws/Data/imu.yaml
+imu_topic: '/sensors/imu'
+imu_rate: 400
+measure_rate: 400 # Rate to which imu data is subsampled
+sequence_time: 11000 # 3 hours in seconds
+```
+```bash
+rosrun allan_variance_ros allan_variance /ORB_SLAM3/catkin_ws/Data/ /ORB_SLAM3/catkin_ws/Data/imu_config.yaml
 ```
 
 ---
