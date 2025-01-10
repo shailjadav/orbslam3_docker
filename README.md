@@ -41,7 +41,11 @@ sequence_time: 40 # 3 hours in seconds
 ```bash
 rosrun allan_variance_ros allan_variance /ORB_SLAM3/catkin_ws/Data/ /ORB_SLAM3/catkin_ws/Data/imu_config.yaml
 ```
+if nan in allan_variance.csv
 
+```bash
+sed -i '1201,$d' allan_variance.csv
+```
 ---
 
 ### 5. Prepare the `.txt` File
