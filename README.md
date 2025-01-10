@@ -65,7 +65,8 @@ sed -i 's/^\([^,]*\),[^,]*/\1/' data.txt
 Use this command to launch the SLAM process:
 
 ```bash
-./Monocular-Inertial/mono_inertial_euroc ../Vocabulary/ORBvoc.txt /ORB_SLAM3/catkin_ws/Data/mono_inertial_EuRoC.yaml /ORB_SLAM3/catkin_ws/Data/GOPRO/ /ORB_SLAM3/catkin_ws/Data/GOPRO/mav0/cam0/data.txt
+./Monocular-Inertial/mono_inertial_euroc ../Vocabulary/ORBvoc.txt /ORB_SLAM3/catkin_ws/config/gopro_fisheye.yaml /ORB_SLAM3/catkin_ws/Data/GOPRO/ /ORB_SLAM3/catkin_ws/Data/GX010024/mav0/cam0/data.txt
+
 ```
 
 ---
