@@ -20,8 +20,8 @@ Camera.k3: 0.01283269195493874 # -0.0020532361418706202
 Camera.k4: -0.004519804281212253 # 0.00020293673591811182
 
 # Camera resolution
-Camera.width: 640
-Camera.height: 480
+Camera.width: 480
+Camera.height: 270
 # Camera.width: 2704
 # Camera.height: 2028
 
@@ -56,13 +56,13 @@ IMU.Frequency: 200
 
 # ORB Extractor: Number of features per image
 # ORBextractor.nFeatures: 5000 # Tested with 1250
-ORBextractor.nFeatures: 2500
+ORBextractor.nFeatures: 1000
 
 # ORB Extractor: Scale factor between levels in the scale pyramid 	
 ORBextractor.scaleFactor: 1.2
 
 # ORB Extractor: Number of levels in the scale pyramid	
-ORBextractor.nLevels: 10
+ORBextractor.nLevels: 8
 # ORBextractor.nLevels: 6
 
 # ORB Extractor: Fast threshold
@@ -90,4 +90,4 @@ Viewer.ViewpointF: 500
 
 # System Parameters
 # System.LoadAtlasFromFile: atlas
-System.SaveAtlasToFile: atlas
+#System.SaveAtlasToFile: atlas
